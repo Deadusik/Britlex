@@ -1,0 +1,27 @@
+.test-card {
+    display: block;
+    padding: $base-padding;
+    border: $card-border;
+    box-shadow: $card-box-shadow;
+    border-radius: 20px;
+    max-width: 400px;
+
+    &__title {
+        font-size: $font-size-xxl;
+        font-weight: bold;
+        color: gray;
+    }
+
+    &__text {
+        font-size: $font-size-xl;
+        color: tomato;
+    }
+
+    @include xs {
+        background-color: tomato;
+    }
+
+    @include sm {
+        background-color: red;
+    }
+}

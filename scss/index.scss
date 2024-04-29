@@ -3,9 +3,12 @@
 
 // base & layout
 @import 'base';
+@import 'breakpoints';
 
 // colors
+@import 'colors';
 
 // components
+@import './components/testCard'
 
 // utilities (margin, padding, opacity)
