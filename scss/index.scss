@@ -9,6 +9,11 @@
 @import 'colors';
 
 // components
-@import './components/testCard'
+@import 'components/navbar';
+@import 'components/header';
+@import 'components/sections/skills';
+
+@import './components/page';
+
 
 // utilities (margin, padding, opacity)
