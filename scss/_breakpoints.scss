@@ -1,9 +1,9 @@
 $breakpoints: (
     'xs': 0,
-    'sm': 480px,
-    'md': 720px,
-    'lg': 960px,
-    'xl': 1200px,
+    'sm': 320px,
+    'md': 575px,
+    'lg': 767px,
+    'xl': 992px,
 );
 
 @mixin xs {

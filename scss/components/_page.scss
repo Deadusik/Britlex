@@ -1,0 +1,26 @@
+.page {
+    width: 100%;
+
+    &__wrapper {
+        padding: 55px 132px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__navbar {}
+
+    &__header {}
+
+    &__skills {}
+
+    &__about-us {}
+
+    &__pricing {}
+
+    &__contact-us {}
+
+    &__footer {}
+}

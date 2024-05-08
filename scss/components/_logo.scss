@@ -1,0 +1,9 @@
+.logo {
+    font-family: Poppins, sans-serif;
+    font-size: $logo-font-size;
+    font-weight: $regular;
+
+    &__span {
+        color: $gray;
+    }
+}
