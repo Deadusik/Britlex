@@ -1,1 +1,51 @@
-.header {}
+.header {
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__info {
+        padding-top: 50px;
+    }
+
+    &__title {
+        max-width: 395px;
+        font-size: 64px;
+        font-weight: $semi-bold;
+        line-height: 80px;
+        position: relative;
+        text-wrap: wrap;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 100px;
+            left: 450px;
+            background: url('/assets/svgs/lamp.svg');
+            background-position: center;
+
+            width: 85px;
+            height: 85px;
+            z-index: 10;
+        }
+    }
+
+    &__text {
+        margin-top: 40px;
+        font-size: 24px;
+        color: $sky-gray;
+        line-height: 36px;
+    }
+
+    &__button {
+        @include button(438px, 118px, 15px);
+        margin-top: 61px;
+        font-size: 36px;
+        color: white;
+    }
+
+    &__picture {
+        width: 661px;
+        height: 661px;
+    }
+}

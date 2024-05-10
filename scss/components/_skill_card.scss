@@ -1,0 +1,63 @@
+.skill-card {
+    background-color: $light-gray;
+    border-radius: 10px;
+
+    &__content {
+        padding: 0 42px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__picture {}
+
+    &__title {
+        font-size: 30px;
+        color: $dark-blue;
+        font-weight: $semi-bold;
+    }
+
+    &__text {
+        margin-top: 26px;
+        font-size: 16px;
+        line-height: 24px;
+        color: $sky-gray;
+    }
+
+    span {
+        display: block;
+        height: 16px;
+    }
+
+    &__button {
+        @include button(230px, 60px, 5px);
+        color: white;
+        margin-top: 38px;
+    }
+
+    &_speaking {
+        grid-area: speaking;
+    }
+
+    &_writing {
+        grid-area: writing;
+    }
+
+    &_reading {
+        grid-area: reading;
+    }
+
+    &_listening {
+        grid-area: listening;
+    }
+}
+
+.skill-card-listening {
+    @extend .skill-card;
+
+    &__info {
+        width: 50%;
+    }
+}

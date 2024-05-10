@@ -1,20 +1,24 @@
 .page {
-    width: 100%;
-
     &__wrapper {
+        display: flex;
+        justify-content: center;
         padding: 55px 132px;
     }
 
     &__content {
-        display: flex;
-        flex-direction: column;
+        max-width: $page-content-max-width;
+        flex: 1 1 auto;
     }
 
     &__navbar {}
 
-    &__header {}
+    &__header {
+        margin-top: 51px;
+    }
 
-    &__skills {}
+    &__skills {
+        margin-top: 166px;
+    }
 
     &__about-us {}
 

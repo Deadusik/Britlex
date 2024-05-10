@@ -1,1 +1,22 @@
-.skills {}
+.skills {
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: 48px;
+        font-weight: $semi-bold;
+    }
+
+    &__cards {
+        margin-top: 120px;
+        height: 894px;
+        display: grid;
+        gap: 20px;
+        grid-template-areas:
+            "speaking writing reading"
+            "speaking listening listening";
+    }
+}
