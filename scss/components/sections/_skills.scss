@@ -15,6 +15,7 @@
         height: 894px;
         display: grid;
         gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
         grid-template-areas:
             "speaking writing reading"
             "speaking listening listening";

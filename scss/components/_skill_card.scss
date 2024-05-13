@@ -1,26 +1,29 @@
-.skill-card {
+%skill-card {
     background-color: $light-gray;
     border-radius: 10px;
 
-    &__content {
+    .content {
         padding: 0 42px;
     }
 
-    &__info {
+    .info {
         display: flex;
         flex-direction: column;
     }
 
-    &__picture {}
+    .picture {
+        max-width: 100%;
+    }
 
-    &__title {
+    .title {
         font-size: 30px;
         color: $dark-blue;
         font-weight: $semi-bold;
+        text-wrap: wrap;
     }
 
-    &__text {
-        margin-top: 26px;
+    .text {
+        margin-top: 20px;
         font-size: 16px;
         line-height: 24px;
         color: $sky-gray;
@@ -31,33 +34,101 @@
         height: 16px;
     }
 
-    &__button {
+    .button {
         @include button(230px, 60px, 5px);
-        color: white;
         margin-top: 38px;
+        font-size: 20px;
+        color: white;
+    }
+}
+
+.skill-card-speaking {
+    @extend %skill-card;
+    grid-area: speaking;
+
+    .content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
-    &_speaking {
-        grid-area: speaking;
+    .info {
+        margin-top: 40px;
+    }
+}
+
+.skill-card-writing {
+    @extend %skill-card;
+    grid-area: writing;
+
+    .content {
+        height: 100%;
+        padding-top: 278px;
+        padding-bottom: 40px;
+        position: relative;
     }
 
-    &_writing {
-        grid-area: writing;
+    .picture {
+        max-width: 293px;
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 
-    &_reading {
-        grid-area: reading;
+    .info {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.skill-card-reading {
+    @extend %skill-card;
+    grid-area: reading;
+
+    .content {
+        height: 100%;
+        padding-top: 278px;
+        padding-bottom: 40px;
+        position: relative;
     }
 
-    &_listening {
-        grid-area: listening;
+    .picture {
+        max-width: 371px;
+        position: absolute;
+        top: 20px;
+        left: 0;
+    }
+
+    .info {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 }
 
 .skill-card-listening {
-    @extend .skill-card;
+    @extend %skill-card;
+    grid-area: listening;
 
-    &__info {
-        width: 50%;
+    .content {
+        height: 100%;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row-reverse;
+    }
+
+    .info {
+        max-width: 328px;
+    }
+
+    .button {
+        margin-top: 20px;
     }
 }

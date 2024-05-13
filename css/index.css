@@ -181,55 +181,120 @@ span {
   height: 661px;
 }
 
-.skill-card, .skill-card-listening {
+.skill-card-listening, .skill-card-reading, .skill-card-writing, .skill-card-speaking {
   background-color: #F5F5F5;
   border-radius: 10px;
 }
-.skill-card__content {
+.skill-card-listening .content, .skill-card-reading .content, .skill-card-writing .content, .skill-card-speaking .content {
   padding: 0 42px;
 }
-.skill-card__info {
+.skill-card-listening .info, .skill-card-reading .info, .skill-card-writing .info, .skill-card-speaking .info {
   display: flex;
   flex-direction: column;
 }
-.skill-card__title {
+.skill-card-listening .picture, .skill-card-reading .picture, .skill-card-writing .picture, .skill-card-speaking .picture {
+  max-width: 100%;
+}
+.skill-card-listening .title, .skill-card-reading .title, .skill-card-writing .title, .skill-card-speaking .title {
   font-size: 30px;
   color: #2A3246;
   font-weight: 600;
+  text-wrap: wrap;
 }
-.skill-card__text {
-  margin-top: 26px;
+.skill-card-listening .text, .skill-card-reading .text, .skill-card-writing .text, .skill-card-speaking .text {
+  margin-top: 20px;
   font-size: 16px;
   line-height: 24px;
   color: #8F95A5;
 }
-.skill-card span, .skill-card-listening span {
+.skill-card-listening span, .skill-card-reading span, .skill-card-writing span, .skill-card-speaking span {
   display: block;
   height: 16px;
 }
-.skill-card__button {
+.skill-card-listening .button, .skill-card-reading .button, .skill-card-writing .button, .skill-card-speaking .button {
   width: 230px;
   height: 60px;
   border-radius: 5px;
   background: #263238;
-  color: white;
   margin-top: 38px;
-}
-.skill-card_speaking {
-  grid-area: speaking;
-}
-.skill-card_writing {
-  grid-area: writing;
-}
-.skill-card_reading {
-  grid-area: reading;
-}
-.skill-card_listening {
-  grid-area: listening;
+  font-size: 20px;
+  color: white;
 }
 
-.skill-card-listening__info {
-  width: 50%;
+.skill-card-speaking {
+  grid-area: speaking;
+}
+.skill-card-speaking .content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.skill-card-speaking .info {
+  margin-top: 40px;
+}
+
+.skill-card-writing {
+  grid-area: writing;
+}
+.skill-card-writing .content {
+  height: 100%;
+  padding-top: 278px;
+  padding-bottom: 40px;
+  position: relative;
+}
+.skill-card-writing .picture {
+  max-width: 293px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.skill-card-writing .info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.skill-card-reading {
+  grid-area: reading;
+}
+.skill-card-reading .content {
+  height: 100%;
+  padding-top: 278px;
+  padding-bottom: 40px;
+  position: relative;
+}
+.skill-card-reading .picture {
+  max-width: 371px;
+  position: absolute;
+  top: 20px;
+  left: 0;
+}
+.skill-card-reading .info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.skill-card-listening {
+  grid-area: listening;
+}
+.skill-card-listening .content {
+  height: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.skill-card-listening .info {
+  max-width: 328px;
+}
+.skill-card-listening .button {
+  margin-top: 20px;
 }
 
 .skills__content {
@@ -246,6 +311,7 @@ span {
   height: 894px;
   display: grid;
   gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-areas: "speaking writing reading" "speaking listening listening";
 }
 
