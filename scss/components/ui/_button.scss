@@ -2,14 +2,14 @@
     width: $width;
     height: $height;
     border-radius: $raduis;
-    background: $ligth-black;
+    background: $light-black;
 }
 
 .outline-button {
     @include button;
 
     background: none;
-    border: 2px solid $ligth-black;
+    border: 2px solid $light-black;
 
     font-size: 20px;
     font-weight: $regular;
