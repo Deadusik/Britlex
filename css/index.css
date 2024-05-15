@@ -224,13 +224,13 @@ span {
 .skill-card-speaking {
   grid-area: speaking;
 }
-.skill-card-speaking .content {
+.skill-card-speaking .skill-card__content {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.skill-card-speaking .info {
+.skill-card-speaking .skill-card__info {
   margin-top: 40px;
 }
 

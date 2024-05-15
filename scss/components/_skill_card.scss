@@ -46,14 +46,14 @@
     @extend %skill-card;
     grid-area: speaking;
 
-    .content {
+    .skill-card__content {
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 
-    .info {
+    .skill-card__info {
         margin-top: 40px;
     }
 }
