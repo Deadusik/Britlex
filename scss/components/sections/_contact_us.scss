@@ -1,1 +1,62 @@
-.contact-us {}
+.contact-us {
+    &__content {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        position: relative;
+    }
+
+    &__form {}
+}
+
+.contact-us-form {
+    max-width: 750px;
+
+    &__title {
+        font-size: 48px;
+        font-weight: $semi-bold;
+    }
+
+    &__picture {
+        position: absolute;
+        left: 0;
+        top: -40px;
+    }
+
+    &__text {
+        margin-top: 66px;
+        font-size: 20px;
+        font-weight: $regular;
+        color: $sky-gray;
+        line-height: 30px;
+    }
+
+    &__input-block {
+        margin-top: 60px;
+    }
+}
+
+.contact-us-input-block {
+    &__input {
+        width: 450px;
+        height: 80px;
+        border: 1px solid $sky-gray;
+        border-radius: 10px;
+        padding-left: 33px;
+        font-size: 20px;
+        font-weight: $regular;
+        color: black;
+
+        &::placeholder {
+            color: $sky-gray;
+        }
+    }
+
+    &__button {
+        margin-left: 12px;
+        @include button(264px, 80px, 10px);
+        font-size: 20px;
+        font-weight: $medium;
+        color: white;
+    }
+}

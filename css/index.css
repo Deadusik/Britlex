@@ -142,7 +142,12 @@ span {
 .header__info {
   padding-top: 50px;
 }
-.header__title {
+.header__picture {
+  width: 661px;
+  height: 661px;
+}
+
+.header-info__title {
   max-width: 395px;
   font-size: 64px;
   font-weight: 600;
@@ -150,7 +155,7 @@ span {
   position: relative;
   text-wrap: wrap;
 }
-.header__title::before {
+.header-info__title::before {
   content: "";
   position: absolute;
   top: 100px;
@@ -161,13 +166,13 @@ span {
   height: 85px;
   z-index: 10;
 }
-.header__text {
+.header-info__text {
   margin-top: 40px;
   font-size: 24px;
   color: #8F95A5;
   line-height: 36px;
 }
-.header__button {
+.header-info__button {
   width: 438px;
   height: 118px;
   border-radius: 15px;
@@ -175,10 +180,6 @@ span {
   margin-top: 61px;
   font-size: 36px;
   color: white;
-}
-.header__picture {
-  width: 661px;
-  height: 661px;
 }
 
 .skill-card-listening, .skill-card-reading, .skill-card-writing, .skill-card-speaking {
@@ -199,10 +200,9 @@ span {
   font-size: 30px;
   color: #2A3246;
   font-weight: 600;
-  text-wrap: wrap;
 }
 .skill-card-listening .skill-card__text, .skill-card-reading .skill-card__text, .skill-card-writing .skill-card__text, .skill-card-speaking .skill-card__text {
-  margin-top: 20px;
+  margin-top: 16px;
   font-size: 16px;
   line-height: 24px;
   color: #8F95A5;
@@ -327,18 +327,18 @@ span {
   max-width: 635px;
 }
 
-.info__title {
+.about-us-info__title {
   font-size: 48px;
   font-weight: 600;
 }
-.info__text {
+.about-us-info__text {
   margin-top: 46px;
   font-size: 20px;
   line-height: 30px;
   font-weight: 400;
   color: #8F95A5;
 }
-.info__counter-block {
+.about-us-info__counter-block {
   margin-top: 68px;
 }
 
@@ -443,6 +443,59 @@ span {
   gap: 30px;
 }
 
+.contact-us__content {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  position: relative;
+}
+.contact-us-form {
+  max-width: 750px;
+}
+.contact-us-form__title {
+  font-size: 48px;
+  font-weight: 600;
+}
+.contact-us-form__picture {
+  position: absolute;
+  left: 0;
+  top: -40px;
+}
+.contact-us-form__text {
+  margin-top: 66px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #8F95A5;
+  line-height: 30px;
+}
+.contact-us-form__input-block {
+  margin-top: 60px;
+}
+
+.contact-us-input-block__input {
+  width: 450px;
+  height: 80px;
+  border: 1px solid #8F95A5;
+  border-radius: 10px;
+  padding-left: 33px;
+  font-size: 20px;
+  font-weight: 400;
+  color: black;
+}
+.contact-us-input-block__input::placeholder {
+  color: #8F95A5;
+}
+.contact-us-input-block__button {
+  margin-left: 12px;
+  width: 264px;
+  height: 80px;
+  border-radius: 10px;
+  background: #263238;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+}
+
 .page__wrapper {
   display: flex;
   justify-content: center;
@@ -463,4 +516,7 @@ span {
 }
 .page__pricing {
   margin-top: 207px;
+}
+.page__contact-us {
+  margin-top: 261px;
 }

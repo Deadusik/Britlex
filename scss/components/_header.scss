@@ -8,6 +8,13 @@
         padding-top: 50px;
     }
 
+    &__picture {
+        width: 661px;
+        height: 661px;
+    }
+}
+
+.header-info {
     &__title {
         max-width: 395px;
         font-size: 64px;
@@ -42,10 +49,5 @@
         margin-top: 61px;
         font-size: 36px;
         color: white;
-    }
-
-    &__picture {
-        width: 661px;
-        height: 661px;
     }
 }
