@@ -185,23 +185,23 @@ span {
   background-color: #F5F5F5;
   border-radius: 10px;
 }
-.skill-card-listening .content, .skill-card-reading .content, .skill-card-writing .content, .skill-card-speaking .content {
+.skill-card-listening .skill-card__content, .skill-card-reading .skill-card__content, .skill-card-writing .skill-card__content, .skill-card-speaking .skill-card__content {
   padding: 0 42px;
 }
-.skill-card-listening .info, .skill-card-reading .info, .skill-card-writing .info, .skill-card-speaking .info {
+.skill-card-listening .skill-card__info, .skill-card-reading .skill-card__info, .skill-card-writing .skill-card__info, .skill-card-speaking .skill-card__info {
   display: flex;
   flex-direction: column;
 }
-.skill-card-listening .picture, .skill-card-reading .picture, .skill-card-writing .picture, .skill-card-speaking .picture {
+.skill-card-listening .skill-card__picture, .skill-card-reading .skill-card__picture, .skill-card-writing .skill-card__picture, .skill-card-speaking .skill-card__picture {
   max-width: 100%;
 }
-.skill-card-listening .title, .skill-card-reading .title, .skill-card-writing .title, .skill-card-speaking .title {
+.skill-card-listening .skill-card__title, .skill-card-reading .skill-card__title, .skill-card-writing .skill-card__title, .skill-card-speaking .skill-card__title {
   font-size: 30px;
   color: #2A3246;
   font-weight: 600;
   text-wrap: wrap;
 }
-.skill-card-listening .text, .skill-card-reading .text, .skill-card-writing .text, .skill-card-speaking .text {
+.skill-card-listening .skill-card__text, .skill-card-reading .skill-card__text, .skill-card-writing .skill-card__text, .skill-card-speaking .skill-card__text {
   margin-top: 20px;
   font-size: 16px;
   line-height: 24px;
@@ -211,7 +211,7 @@ span {
   display: block;
   height: 16px;
 }
-.skill-card-listening .button, .skill-card-reading .button, .skill-card-writing .button, .skill-card-speaking .button {
+.skill-card-listening .skill-card__button, .skill-card-reading .skill-card__button, .skill-card-writing .skill-card__button, .skill-card-speaking .skill-card__button {
   width: 230px;
   height: 60px;
   border-radius: 5px;
@@ -237,19 +237,19 @@ span {
 .skill-card-writing {
   grid-area: writing;
 }
-.skill-card-writing .content {
+.skill-card-writing .skill-card__content {
   height: 100%;
   padding-top: 278px;
   padding-bottom: 40px;
   position: relative;
 }
-.skill-card-writing .picture {
+.skill-card-writing .skill-card__picture {
   max-width: 293px;
   position: absolute;
   top: 0;
   right: 0;
 }
-.skill-card-writing .info {
+.skill-card-writing .skill-card__info {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -259,19 +259,19 @@ span {
 .skill-card-reading {
   grid-area: reading;
 }
-.skill-card-reading .content {
+.skill-card-reading .skill-card__content {
   height: 100%;
   padding-top: 278px;
   padding-bottom: 40px;
   position: relative;
 }
-.skill-card-reading .picture {
+.skill-card-reading .skill-card__picture {
   max-width: 371px;
   position: absolute;
   top: 20px;
   left: 0;
 }
-.skill-card-reading .info {
+.skill-card-reading .skill-card__info {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -281,7 +281,7 @@ span {
 .skill-card-listening {
   grid-area: listening;
 }
-.skill-card-listening .content {
+.skill-card-listening .skill-card__content {
   height: 100%;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -290,10 +290,10 @@ span {
   align-items: center;
   flex-direction: row-reverse;
 }
-.skill-card-listening .info {
+.skill-card-listening .skill-card__info {
   max-width: 328px;
 }
-.skill-card-listening .button {
+.skill-card-listening .skill-card__button {
   margin-top: 20px;
 }
 
