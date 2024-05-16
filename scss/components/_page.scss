@@ -2,7 +2,25 @@
     &__wrapper {
         display: flex;
         justify-content: center;
-        padding: 55px 132px;
+        padding-bottom: 0;
+
+        padding: 46px 16px;
+
+        @include sm {
+            padding: 50px 33px;
+        }
+
+        @include md {
+            padding: 45px 39px;
+        }
+
+        @include lg {
+            padding: 25px 29px;
+        }
+
+        @include xl {
+            padding: 55px 132px;
+        }
     }
 
     &__content {
@@ -32,5 +50,9 @@
         margin-top: 261px;
     }
 
-    &__footer {}
+    &__footer {
+        margin-top: 133px;
+    }
+
+
 }
