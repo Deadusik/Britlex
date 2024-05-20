@@ -11,18 +11,20 @@
     &__logo {}
 
     &__links {
-        display: flex;
-        gap: 38px;
     }
 
     &__button {}
+
+    &__icon {
+
+    }
 
     @include xl {}
 }
 
 .navbar-links {
     &__link {
-        color: black;
+        color: $light-black;
         font-size: 16px;
         font-weight: $medium;
 

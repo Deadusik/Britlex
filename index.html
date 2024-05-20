@@ -19,14 +19,38 @@
                         <h1 class="navbar__logo logo">
                             Brit<span>lex</span>
                         </h1>
-                        <div class="navbar__links navbar-links">
+                        <div id="pc-nav-links" class="navbar__links navbar-links">
                             <a href="#" class="navbar-links__link">Home</a>
                             <a href="#" class="navbar-links__link">Skills</a>
                             <a href="#" class="navbar-links__link">About Us</a>
                             <a href="#" class="navbar-links__link">Pricing</a>
                             <a href="#" class="navbar-links__link">Contacts</a>
                         </div>
-                        <button class="navbar__button outline-button">Let's Talk</button>
+                        <button id="pc-nav-btn" class="navbar__button outline-button">Let's Talk</button>
+                        <!-- mobile burger -->
+                        <button class="navbar__icon burger-menu">
+                            <div class="burger-menu__icon">
+                                <span></span>
+                            </div>
+                        </button>
+                        <!-- mobile menu -->
+                        <div class="navbar-menu">
+                            <div class="navbar-menu__body">
+                                <div class="navbar-menu__content"> 
+                                    <button class="navbar-menu__close-button close-button"></button>
+                                    <h1 class="navbar-menu__logo logo">Brit<span>lex</span></h1>
+                                    <hr class="navbar-menu__divider">
+                                    <div class="navbar-menu__links navbar-links">
+                                        <a href="#" class="navbar-links__link">Home</a>
+                                        <a href="#" class="navbar-links__link">Skills</a>
+                                        <a href="#" class="navbar-links__link">About Us</a>
+                                        <a href="#" class="navbar-links__link">Pricing</a>
+                                        <a href="#" class="navbar-links__link">Contacts</a>
+                                    </div>
+                                    <button class="navbar-menu__button outline-button">Let's Talk</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </navbar>
                 <!-- header -->
@@ -252,6 +276,7 @@
             </div>
         </div>
     </div>
+    <!-- script file -->
+    <script src="script.js"></script>
 </body>
-
 </html>

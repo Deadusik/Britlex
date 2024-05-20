@@ -1,0 +1,42 @@
+.burger-menu {
+    display: none;
+    padding: 20px;
+    background: transparent;
+
+    &_active {
+        display: block;
+    }
+
+    &__icon {
+        width: 42px;
+        height: 24px;
+        position: relative;
+
+        &::before, &::after, & span {
+            left: 0;
+            position: absolute;
+            height: 4px;
+            width: 100%;
+            background: $gray-blue;
+            border-radius: 1px;
+        }
+
+        &::before, &::after {
+            content: '';
+        }
+
+        &::before {
+            top: 0;
+        }
+
+        &::after {
+            width: 30px;
+            bottom: 0;
+        }
+
+        span {
+            top: 50%;
+            transform: scale(1) translate(0, -50%);
+        }
+    }
+}

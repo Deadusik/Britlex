@@ -10,8 +10,13 @@
 
 // components
 @import 'components/ui/button';
+@import 'components/ui/close_button';
+@import 'components/ui/burger_menu';
 @import 'components/logo';
-@import 'components/navbar';
+
+@import 'components/navbar/navbar-links';
+@import 'components/navbar/navbar-menu';
+@import 'components/navbar/navbar';
 
 @import 'components/header';
 
