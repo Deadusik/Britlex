@@ -99,6 +99,7 @@ span {
   height: 65px;
   border-radius: 5px;
   background: #263238;
+  width: 100%;
   background: none;
   border: 2px solid #263238;
   font-size: 20px;
@@ -109,7 +110,7 @@ span {
 }
 @media (min-width: 320px) {
   .outline-button {
-    width: 330px;
+    max-width: 330px;
     height: 70px;
   }
 }
@@ -203,10 +204,19 @@ span {
   }
 }
 
+.navbar-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+@media (min-width: 767px) {
+  .navbar-links {
+    flex-direction: row;
+    gap: 30px;
+  }
+}
 @media (min-width: 1200px) {
   .navbar-links {
-    display: flex;
-    align-items: center;
     gap: 38px;
   }
 }
@@ -215,21 +225,32 @@ span {
 }
 .navbar-links__link {
   color: black;
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 500;
-  margin-top: 48px;
+  margin-top: 42px;
+}
+@media (min-width: 320px) {
+  .navbar-links__link {
+    font-size: 24px;
+  }
 }
 @media (min-width: 575px) {
   .navbar-links__link {
     margin-top: 43px;
+    font-size: 22px;
   }
   .navbar-links__link:first-child {
     margin-top: 0;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 767px) {
   .navbar-links__link {
     margin-top: 0;
+    font-size: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  .navbar-links__link {
     font-size: 20px;
   }
 }
@@ -293,17 +314,13 @@ span {
     margin-top: 33px;
   }
 }
-.navbar-menu__links {
-  display: flex;
-  flex-direction: column;
-}
 @media (min-width: 575px) {
   .navbar-menu__links {
     margin-top: 58px;
   }
 }
 .navbar-menu__button {
-  margin-top: 94px;
+  margin-top: 80px;
 }
 @media (min-width: 320px) {
   .navbar-menu__button {
@@ -316,8 +333,20 @@ span {
   }
 }
 .navbar-menu__close-button {
-  top: 6px;
-  right: 15px;
+  top: 25px;
+  right: 7px;
+}
+@media (min-width: 320px) {
+  .navbar-menu__close-button {
+    top: 54px;
+    right: 23px;
+  }
+}
+@media (min-width: 575px) {
+  .navbar-menu__close-button {
+    top: 22px;
+    right: 15px;
+  }
 }
 
 .navbar {
@@ -758,20 +787,26 @@ span {
   flex: 1 1 auto;
 }
 .page__header {
+  display: none;
   margin-top: 51px;
 }
 .page__skills {
+  display: none;
   margin-top: 166px;
 }
 .page__about-us {
+  display: none;
   margin-top: 252px;
 }
 .page__pricing {
+  display: none;
   margin-top: 207px;
 }
 .page__contact-us {
+  display: none;
   margin-top: 261px;
 }
 .page__footer {
+  display: none;
   margin-top: 133px;
 }

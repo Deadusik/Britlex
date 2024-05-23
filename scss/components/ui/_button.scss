@@ -8,6 +8,7 @@
 .outline-button {
     @include button;
 
+    width: 100%;
     background: none;
     border: 2px solid $light-black;
 
@@ -19,7 +20,7 @@
     }
 
     @include sm {
-        width: 330px;
+        max-width: 330px;
         height: 70px;
     }
 

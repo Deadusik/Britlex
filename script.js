@@ -9,7 +9,7 @@ let menuCloseButton = null
 let mobileMenu = null
 
 document.addEventListener('DOMContentLoaded', () => {
-    if(isMobile) {
+    if (isMobile) {
         burgerButton = document.querySelector('.burger-menu')
         pcLinks = document.getElementById('pc-nav-links')
         pcNavButton = document.getElementById('pc-nav-btn')
@@ -24,17 +24,17 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 function checkIsMobile() {
-    return window.outerWidth < 767;
+    return window.outerWidth < 766;
 }
 
 function setMenuVisibility() {
-    if(mobileMenu) {
+    if (mobileMenu) {
         mobileMenu.classList.toggle('navbar-menu_active')
     }
 }
 
 function setMobileNavbar() {
-    if(burgerButton && pcLinks && pcNavButton) {
+    if (burgerButton && pcLinks && pcNavButton) {
         burgerButton.classList.add('burger-menu_active')
         pcLinks.classList.add('navbar-links_hidden')
         pcNavButton.classList.add('outline-button_hidden')
@@ -42,8 +42,8 @@ function setMobileNavbar() {
 }
 
 function setMenuHandlers() {
-    if(burgerButton && menuCloseButton) {
-        const toggleMenu = () => 
+    if (burgerButton && menuCloseButton) {
+        const toggleMenu = () =>
             setMenuVisibility()
 
         menuCloseButton.addEventListener('click', toggleMenu)

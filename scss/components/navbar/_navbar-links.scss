@@ -1,10 +1,19 @@
 .navbar-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    @include md {}
+
+    @include lg {
+        flex-direction: row;
+        gap: 30px;
+    }
 
     @include xl {
-        display: flex;
-        align-items: center;
         gap: 38px;
     }
+
 
     &_hidden {
         display: none;
@@ -12,20 +21,29 @@
 
     &__link {
         color: black;
-        font-size: 16px;
+        font-size: 22px;
         font-weight: $medium;
-        margin-top: 48px;
+        margin-top: 42px;
+
+        @include sm {
+            font-size: 24px;
+        }
 
         @include md {
             margin-top: 43px;
+            font-size: 22px;
 
             &:first-child {
                 margin-top: 0;
             }
         }
 
-        @include xl {
+        @include lg {
             margin-top: 0;
+            font-size: 16px;
+        }
+
+        @include xl {
             font-size: 20px;
         }
 
