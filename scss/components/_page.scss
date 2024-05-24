@@ -4,7 +4,7 @@
         justify-content: center;
         padding-bottom: 0;
 
-        padding: 46px 16px;
+        padding: 10px 16px;
 
         @include sm {
             padding: 50px 33px;
@@ -31,8 +31,11 @@
     &__navbar {}
 
     &__header {
-        display: none;
-        margin-top: 51px;
+        margin-top: 40px;
+
+        @include xl {
+            margin-top: 51px;
+        }
     }
 
     &__skills {

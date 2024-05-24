@@ -1,6 +1,11 @@
 .burger-menu {
     display: none;
-    padding: 20px;
+    padding: 5px;
+
+    @include sm {
+        padding: 20px;
+    }
+
     background: transparent;
 
     &_active {
@@ -8,20 +13,43 @@
     }
 
     &__icon {
-        width: 42px;
-        height: 24px;
+        width: 33px;
+        height: 20px;
+
+        @include sm {
+            width: 42px;
+            height: 24px;
+        }
+
+        @include md {
+            width: 30px;
+            height: 18px;
+        }
+
         position: relative;
 
-        &::before, &::after, & span {
+        &::before,
+        &::after,
+        & span {
             left: 0;
             position: absolute;
-            height: 4px;
+            height: 3px;
+
+            @include sm {
+                height: 4px;
+            }
+
+            @include md {
+                height: 3px;
+            }
+
             width: 100%;
             background: $gray-blue;
             border-radius: 1px;
         }
 
-        &::before, &::after {
+        &::before,
+        &::after {
             content: '';
         }
 
@@ -30,8 +58,16 @@
         }
 
         &::after {
-            width: 30px;
+            width: 24px;
             bottom: 0;
+
+            @include sm {
+                width: 30px;
+            }
+
+            @include md {
+                width: 22px;
+            }
         }
 
         span {
