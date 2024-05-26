@@ -3,7 +3,7 @@ $breakpoints: (
     'sm': 320px,
     'md': 575px,
     'lg': 767px,
-    'xl': 1200px,
+    'xl': 992px,
 );
 
 @mixin xs {
@@ -36,7 +36,7 @@ $breakpoints: (
     }
 }
 
-@mixin breakpoint($bp: 0) {
+@mixin bp($bp: 0) {
     @media (min-width: $bp) {
         @content;
     }

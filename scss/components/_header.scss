@@ -4,13 +4,13 @@
         flex-direction: column-reverse;
         align-items: center;
 
-        @include md {
+        @include md {}
+
+        @include lg {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
         }
-
-        @include xl {}
     }
 
     &__info {
@@ -21,16 +21,17 @@
         max-width: 100%;
 
         @include md {
-            width: 352px;
+            max-width: 100%;
+            min-width: 50%;
         }
+
+        @include bp(840px) {}
 
         @include lg {
             width: 460px;
         }
 
-        @include xl {
-            width: 661px;
-        }
+        @include xl {}
     }
 }
 
@@ -39,7 +40,9 @@
     flex-direction: column;
     align-items: center;
 
-    @include md {
+    @include md {}
+
+    @include lg {
         align-items: flex-start;
     }
 
@@ -54,21 +57,30 @@
         text-wrap: balance;
         text-align: center;
 
+        span {
+            @include md {
+                display: block;
+            }
+        }
+
         @include md {
-            text-align: start;
             font-size: 36px;
             line-height: 45px;
             text-wrap: wrap;
         }
 
         @include lg {
+            text-align: start;
+        }
+
+        @include bp(850px) {
             width: 290px;
             font-size: 48px;
             line-height: 64px;
         }
 
-        @include xl {
-            max-width: 395px;
+        @include bp(1100px) {
+            width: 395px;
             font-size: 64px;
             line-height: 80px;
         }
@@ -79,20 +91,36 @@
             background: none;
             z-index: 10;
 
-
             @include md {
                 background: url('/assets/svgs/lamp.svg');
                 background-position: center;
                 background-size: cover;
-                top: 70px;
-                left: 200px;
+            }
+
+            @include lg {
+                top: 60px;
+                left: 230px;
                 width: 60px;
                 height: 60px;
             }
 
             @include xl {
                 top: 100px;
-                left: 450px;
+                left: 320px;
+                width: 60px;
+                height: 60px;
+            }
+
+            @include bp(850px) {
+                width: 80px;
+                height: 80px;
+                top: 100px;
+                left: 280px;
+            }
+
+            @include bp(1100px) {
+                top: 120px;
+                left: 400px;
                 width: 85px;
                 height: 85px;
             }
@@ -102,25 +130,26 @@
     &__text {
         color: $sky-gray;
         font-size: 14px;
-        text-align: center;
         margin-top: 20px;
         text-wrap: pretty;
         line-height: 20px;
+        text-align: center;
 
         @include md {
-            font-size: 16px;
-            max-width: 320px;
-            text-align: start;
-            line-height: 26px;
-        }
-
-        @include lg {
+            margin-top: 30px;
             max-width: 420px;
             font-size: 20px;
             line-height: 26px;
         }
 
-        @include xl {
+        @include lg {
+            text-align: start;
+        }
+
+        @include xl {}
+
+        @include bp(1100px) {
+            max-width: 518px;
             line-height: 36px;
             margin-top: 40px;
             font-size: 24px;
@@ -136,15 +165,25 @@
         margin-top: 41px;
 
         @include md {
-            margin-top: 20px;
+            margin-top: 30px;
             width: 236px;
             height: 65px;
         }
 
         @include xl {
+            margin-top: 41px;
+            width: 338px;
+            height: 88px;
+            border-radius: 5px;
+            font-size: 30px;
+        }
+
+        @include bp(1100px) {
+            margin-top: 71px;
             width: 438px;
             height: 118px;
             border-radius: 15px;
+            font-size: 36px;
         }
     }
 }

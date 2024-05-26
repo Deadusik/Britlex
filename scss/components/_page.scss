@@ -19,6 +19,14 @@
         }
 
         @include xl {
+            padding: 55px 29px;
+        }
+
+        @include bp(1200px) {
+            padding: 55px 50px;
+        }
+
+        @include bp(1400px) {
             padding: 55px 132px;
         }
     }
