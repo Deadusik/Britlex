@@ -36,7 +36,9 @@
         flex: 1 1 auto;
     }
 
-    &__navbar {}
+    &__navbar {
+        margin-top: 20px;
+    }
 
     &__header {
         margin-top: 40px;
@@ -47,8 +49,11 @@
     }
 
     &__skills {
-        display: none;
-        margin-top: 166px;
+        margin-top: 80px;
+
+        @include xl {
+            margin-top: 166px;
+        }
     }
 
     &__about-us {

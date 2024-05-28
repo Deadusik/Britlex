@@ -1,6 +1,6 @@
 "use strict"
 
-const isMobile = checkIsMobile()
+let isMobile = false
 
 let burgerButton = null
 let pcLinks = null
@@ -9,22 +9,34 @@ let menuCloseButton = null
 let mobileMenu = null
 
 document.addEventListener('DOMContentLoaded', () => {
-    if (isMobile) {
-        burgerButton = document.querySelector('.burger-menu')
-        pcLinks = document.getElementById('pc-nav-links')
-        pcNavButton = document.getElementById('pc-nav-btn')
-        menuCloseButton = document.querySelector('.close-button')
-        mobileMenu = document.querySelector('.navbar-menu')
-
-        setMobileNavbar()
-        setMenuHandlers()
-    } else {
-        document.body.classList.add('_pc')
-    }
+    setMobilePageByCondition()
+    setMenuHandlers()
 })
 
+window.addEventListener('resize', () => {
+    setMobilePageByCondition()
+})
+
+function setMobilePageByCondition() {
+    isMobile = checkIsMobile()
+
+    if (isMobile) {
+        setMoblePage()
+    } else {
+        removeMobileNavbar()
+    }
+}
+
+function setMoblePage() {
+    pcLinks = document.getElementById('pc-nav-links')
+    pcNavButton = document.getElementById('pc-nav-btn')
+    mobileMenu = document.querySelector('.navbar-menu')
+
+    setMobileNavbar()
+}
+
 function checkIsMobile() {
-    return window.outerWidth < 766;
+    return window.outerWidth < 767;
 }
 
 function setMenuVisibility() {
@@ -41,7 +53,18 @@ function setMobileNavbar() {
     }
 }
 
+function removeMobileNavbar() {
+    if (burgerButton && pcLinks && pcNavButton) {
+        burgerButton.classList.remove('burger-menu_active')
+        pcLinks.classList.remove('navbar-links_hidden')
+        pcNavButton.classList.remove('outline-button_hidden')
+    }
+}
+
 function setMenuHandlers() {
+    burgerButton = document.querySelector('.burger-menu')
+    menuCloseButton = document.querySelector('.close-button')
+
     if (burgerButton && menuCloseButton) {
         const toggleMenu = () =>
             setMenuVisibility()
