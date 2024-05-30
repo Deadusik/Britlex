@@ -8,14 +8,16 @@ let pcNavButton = null
 let menuCloseButton = null
 let mobileMenu = null
 
-document.addEventListener('DOMContentLoaded', () => {
-    setMobilePageByCondition()
-    setMenuHandlers()
-})
+initPage()
 
 window.addEventListener('resize', () => {
     setMobilePageByCondition()
 })
+
+function initPage() {
+    setMobilePageByCondition()
+    setMenuHandlers()
+}
 
 function setMobilePageByCondition() {
     isMobile = checkIsMobile()
@@ -31,6 +33,7 @@ function setMoblePage() {
     pcLinks = document.getElementById('pc-nav-links')
     pcNavButton = document.getElementById('pc-nav-btn')
     mobileMenu = document.querySelector('.navbar-menu')
+    burgerButton = document.querySelector('.burger-menu')
 
     setMobileNavbar()
 }
