@@ -11,6 +11,10 @@
         height: auto;
     }
 
+    @include xl {
+        padding: 0 41px;
+    }
+
     .skill-card__content {
         display: flex;
         flex-direction: column;
@@ -152,6 +156,17 @@
         @include md {
             max-width: 185px;
         }
+
+        @include lg {
+            max-width: 260px;
+        }
+
+        @include xl {
+            max-width: 360px;
+            top: 0;
+            left: auto;
+            right: auto;
+        }
     }
 }
 
@@ -161,11 +176,6 @@
 
     .skill-card__content {
         position: relative;
-
-        @include xl {
-            padding-top: 40px;
-            padding-top: 278px;
-        }
     }
 
     .skill-card__picture {
@@ -177,9 +187,9 @@
 
         @include xl {
             max-width: 293px;
-            position: absolute;
-            top: 0;
-            right: 0;
+            top: -2%;
+            left: 15%;
+            right: auto;
         }
     }
 
@@ -194,13 +204,7 @@
     @extend %skill-card;
     grid-area: reading;
 
-    .skill-card__content {
-
-        @include xl {
-            padding-top: 40px;
-            padding-top: 278px;
-        }
-    }
+    .skill-card__content {}
 
     .skill-card__picture {
 
@@ -211,20 +215,15 @@
 
         @include xl {
             max-width: 371px;
-            position: absolute;
-            top: 20px;
-            left: 0;
+            top: 0;
+            right: auto;
+            left: -9%;
         }
     }
 
     .skill-card__info {
         display: flex;
         flex-direction: column;
-
-        @include xl {
-            height: 100%;
-            justify-content: space-between;
-        }
     }
 }
 
@@ -254,6 +253,10 @@
 
         @include bp(860px) {
             right: 10%;
+        }
+
+        @include xl {
+            max-width: 382px;
         }
     }
 

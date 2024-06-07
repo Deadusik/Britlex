@@ -38,10 +38,14 @@
             height: 894px;
             gap: 10px;
             grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: 441px 210px;
+            grid-template-rows: 441px 241px;
             grid-template-areas:
                 "speaking writing reading"
                 "speaking listening listening";
+        }
+
+        @include xl {
+            grid-template-rows: 531px 343px;
         }
     }
 }
