@@ -609,12 +609,22 @@ span {
     height: 534px;
   }
 }
+@media (min-width: 670px) {
+  .skill-card-listening, .skill-card-reading, .skill-card-writing, .skill-card-speaking {
+    height: 480px;
+  }
+}
 @media (min-width: 767px) {
   .skill-card-listening, .skill-card-reading, .skill-card-writing, .skill-card-speaking {
     height: auto;
   }
 }
 @media (min-width: 992px) {
+  .skill-card-listening, .skill-card-reading, .skill-card-writing, .skill-card-speaking {
+    padding: 0 20px;
+  }
+}
+@media (min-width: 1200px) {
   .skill-card-listening, .skill-card-reading, .skill-card-writing, .skill-card-speaking {
     padding: 0 41px;
   }
@@ -765,15 +775,25 @@ span {
 }
 @media (min-width: 767px) {
   .skill-card-speaking .skill-card__picture {
-    max-width: 260px;
+    max-width: 90%;
+    left: auto;
+    right: auto;
+  }
+}
+@media (min-width: 820px) {
+  .skill-card-speaking .skill-card__picture {
+    max-width: 80%;
   }
 }
 @media (min-width: 992px) {
   .skill-card-speaking .skill-card__picture {
-    max-width: 360px;
+    max-width: 90%;
+    margin-top: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  .skill-card-speaking .skill-card__picture {
     top: 0;
-    left: auto;
-    right: auto;
   }
 }
 
@@ -793,10 +813,15 @@ span {
 }
 @media (min-width: 992px) {
   .skill-card-writing .skill-card__picture {
-    max-width: 293px;
+    max-width: 90%;
     top: -2%;
-    left: 15%;
+    left: 5%;
     right: auto;
+  }
+}
+@media (min-width: 1200px) {
+  .skill-card-writing .skill-card__picture {
+    left: 15%;
   }
 }
 .skill-card-writing .skill-card__info {
@@ -816,8 +841,8 @@ span {
 }
 @media (min-width: 992px) {
   .skill-card-reading .skill-card__picture {
-    max-width: 371px;
-    top: 0;
+    max-width: 100%;
+    top: 3%;
     right: auto;
     left: -9%;
   }
@@ -832,9 +857,11 @@ span {
 }
 @media (min-width: 767px) {
   .skill-card-listening .skill-card__content {
+    padding-top: 0;
     padding-bottom: 0;
     display: flex;
     flex-direction: row;
+    align-items: center;
   }
 }
 .skill-card-listening .skill-card__picture {
@@ -849,6 +876,7 @@ span {
   .skill-card-listening .skill-card__picture {
     left: auto;
     right: 2%;
+    margin-top: 10px;
   }
 }
 @media (min-width: 860px) {
@@ -858,7 +886,14 @@ span {
 }
 @media (min-width: 992px) {
   .skill-card-listening .skill-card__picture {
-    max-width: 382px;
+    max-width: 60%;
+    right: 0;
+    top: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .skill-card-listening .skill-card__picture {
+    max-width: 100%;
   }
 }
 @media (min-width: 767px) {
