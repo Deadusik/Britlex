@@ -1,42 +1,163 @@
 .about-us {
     &__content {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+
+
+        @include md {}
+
+        @include lg {}
     }
 
     &__picture {
-        max-width: 500px;
+        width: 100%;
+        margin-top: 56px;
+
+        @include sm {}
+
+        @include md {
+            margin-top: 50px;
+            max-width: 352px;
+            position: static;
+        }
+
+        @include lg {
+            position: absolute;
+            right: 0;
+            max-width: 295px;
+            bottom: 10px;
+        }
+
+        @include bp(810px) {
+            max-width: 336px;
+            bottom: 0;
+        }
+
+        @include xl {
+            bottom: -60px;
+            max-width: 500px;
+        }
+
+        @include bp(1270px) {
+            bottom: -40px;
+        }
     }
 
-    &__info {
-        max-width: 635px;
-    }
+    &__info {}
 }
 
 .about-us-info {
+    width: 100%;
+    position: relative;
+
+    @include md {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @include lg {
+        align-items: start;
+    }
+
     &__title {
-        font-size: 48px;
+        font-size: 24px;
         font-weight: $semi-bold;
+        text-align: center;
+
+        @include sm {}
+
+        @include md {
+            text-align: initial;
+            font-size: 30px;
+        }
+
+        @include lg {}
+
+        @include xl {
+            font-size: 36px;
+        }
+
+        @include bp(1270px) {
+            font-size: 48px;
+        }
     }
 
     &__text {
+        width: 100%;
         margin-top: 46px;
-        font-size: 20px;
-        line-height: 30px;
+        font-size: 13px;
+        line-height: 20px;
         font-weight: $regular;
         color: $sky-gray;
+        text-align: center;
+
+
+        @include md {
+            max-width: 510px;
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        @include lg {
+            text-align: initial;
+            margin-top: 18px;
+            line-height: 24px;
+            max-width: 420px;
+            font-size: 16px;
+        }
+
+        @include xl {
+            max-width: 520px;
+        }
+
+        @include bp(1270px) {
+            max-width: 635px;
+            margin-top: 46px;
+            font-size: 20px;
+            line-height: 30px;
+        }
     }
 
     &__counter-block {
         margin-top: 68px;
+
+        @include lg {
+            margin-top: 40px;
+        }
+
+        @include xl {}
+
+        @include bp(1270px) {
+            margin-top: 68px;
+        }
     }
 }
 
 .counter-block {
     max-width: 610px;
+    width: 100%;
+    gap: 60px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+
+    @include sm {}
+
+    @include md {
+        max-width: 418px;
+        flex-direction: row;
+    }
+
+    @include lg {
+        max-width: 395px;
+    }
+
+    @include xl {}
+
+    @include bp(1270px) {
+        max-width: 610px;
+    }
 
     &__counter {}
 }
@@ -47,15 +168,44 @@
     align-items: center;
 
     &__count {
-        font-size: 48px;
+        font-size: 24px;
         font-weight: $semi-bold;
         color: $light-black;
+
+        @include md {
+            font-size: 22px;
+        }
+
+        @include lg {
+            font-size: 30px;
+        }
+
+        @include xl {}
+
+        @include bp(1270px) {
+            font-size: 48px;
+        }
     }
 
     &__info {
-        margin-top: 20px;
-        font-size: 20px;
+        margin-top: 18px;
+        font-size: 15px;
         font-weight: $regular;
         color: $sky-gray;
+        text-wrap: nowrap;
+
+        @include md {
+            font-size: 14px;
+        }
+
+        @include lg {
+            font-size: 16px;
+        }
+
+        @include xl {}
+
+        @include bp(1270px) {
+            font-size: 20px;
+        }
     }
 }

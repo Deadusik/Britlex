@@ -938,7 +938,6 @@ span {
 @media (min-width: 767px) {
   .skills__cards {
     margin-top: 120px;
-    height: 894px;
     gap: 10px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 441px 241px;
@@ -953,35 +952,156 @@ span {
 
 .about-us__content {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 .about-us__picture {
-  max-width: 500px;
+  width: 100%;
+  margin-top: 56px;
 }
-.about-us__info {
-  max-width: 635px;
+@media (min-width: 575px) {
+  .about-us__picture {
+    margin-top: 50px;
+    max-width: 352px;
+    position: static;
+  }
 }
-
+@media (min-width: 767px) {
+  .about-us__picture {
+    position: absolute;
+    right: 0;
+    max-width: 295px;
+    bottom: 10px;
+  }
+}
+@media (min-width: 810px) {
+  .about-us__picture {
+    max-width: 336px;
+    bottom: 0;
+  }
+}
+@media (min-width: 992px) {
+  .about-us__picture {
+    bottom: -60px;
+    max-width: 500px;
+  }
+}
+@media (min-width: 1270px) {
+  .about-us__picture {
+    bottom: -40px;
+  }
+}
+.about-us-info {
+  width: 100%;
+  position: relative;
+}
+@media (min-width: 575px) {
+  .about-us-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (min-width: 767px) {
+  .about-us-info {
+    align-items: start;
+  }
+}
 .about-us-info__title {
-  font-size: 48px;
+  font-size: 24px;
   font-weight: 600;
+  text-align: center;
+}
+@media (min-width: 575px) {
+  .about-us-info__title {
+    text-align: initial;
+    font-size: 30px;
+  }
+}
+@media (min-width: 992px) {
+  .about-us-info__title {
+    font-size: 36px;
+  }
+}
+@media (min-width: 1270px) {
+  .about-us-info__title {
+    font-size: 48px;
+  }
 }
 .about-us-info__text {
+  width: 100%;
   margin-top: 46px;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 13px;
+  line-height: 20px;
   font-weight: 400;
   color: #8F95A5;
+  text-align: center;
+}
+@media (min-width: 575px) {
+  .about-us-info__text {
+    max-width: 510px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+@media (min-width: 767px) {
+  .about-us-info__text {
+    text-align: initial;
+    margin-top: 18px;
+    line-height: 24px;
+    max-width: 420px;
+    font-size: 16px;
+  }
+}
+@media (min-width: 992px) {
+  .about-us-info__text {
+    max-width: 520px;
+  }
+}
+@media (min-width: 1270px) {
+  .about-us-info__text {
+    max-width: 635px;
+    margin-top: 46px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 .about-us-info__counter-block {
   margin-top: 68px;
 }
+@media (min-width: 767px) {
+  .about-us-info__counter-block {
+    margin-top: 40px;
+  }
+}
+@media (min-width: 1270px) {
+  .about-us-info__counter-block {
+    margin-top: 68px;
+  }
+}
 
 .counter-block {
   max-width: 610px;
+  width: 100%;
+  gap: 60px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+}
+@media (min-width: 575px) {
+  .counter-block {
+    max-width: 418px;
+    flex-direction: row;
+  }
+}
+@media (min-width: 767px) {
+  .counter-block {
+    max-width: 395px;
+  }
+}
+@media (min-width: 1270px) {
+  .counter-block {
+    max-width: 610px;
+  }
 }
 .counter {
   display: flex;
@@ -989,15 +1109,46 @@ span {
   align-items: center;
 }
 .counter__count {
-  font-size: 48px;
+  font-size: 24px;
   font-weight: 600;
   color: #263238;
 }
+@media (min-width: 575px) {
+  .counter__count {
+    font-size: 22px;
+  }
+}
+@media (min-width: 767px) {
+  .counter__count {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1270px) {
+  .counter__count {
+    font-size: 48px;
+  }
+}
 .counter__info {
-  margin-top: 20px;
-  font-size: 20px;
+  margin-top: 18px;
+  font-size: 15px;
   font-weight: 400;
   color: #8F95A5;
+  text-wrap: nowrap;
+}
+@media (min-width: 575px) {
+  .counter__info {
+    font-size: 14px;
+  }
+}
+@media (min-width: 767px) {
+  .counter__info {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1270px) {
+  .counter__info {
+    font-size: 20px;
+  }
 }
 
 .personal-tuition-service, .online-classes-service, .self-study-service {
@@ -1214,8 +1365,17 @@ span {
   }
 }
 .page__about-us {
-  display: none;
-  margin-top: 252px;
+  margin-top: 84px;
+}
+@media (min-width: 575px) {
+  .page__about-us {
+    margin-top: 115px;
+  }
+}
+@media (min-width: 767px) {
+  .page__about-us {
+    margin-top: 252px;
+  }
 }
 .page__pricing {
   display: none;

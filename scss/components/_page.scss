@@ -57,8 +57,15 @@
     }
 
     &__about-us {
-        display: none;
-        margin-top: 252px;
+        margin-top: 84px;
+
+        @include md {
+            margin-top: 115px;
+        }
+
+        @include lg {
+            margin-top: 252px;
+        }
     }
 
     &__pricing {
