@@ -1225,9 +1225,16 @@ span {
 }
 .pricing__services {
   margin-top: 67px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 575px) {
+  .pricing__services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
 }
 
 .contact-us__content {
@@ -1378,7 +1385,6 @@ span {
   }
 }
 .page__pricing {
-  display: none;
   margin-top: 207px;
 }
 .page__contact-us {
