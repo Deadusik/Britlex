@@ -1153,6 +1153,10 @@ span {
 
 .personal-tuition-service, .online-classes-service, .self-study-service {
   display: flex;
+  margin-top: 72px;
+}
+.personal-tuition-service:first-child, .online-classes-service:first-child, .self-study-service:first-child {
+  margin-top: 0;
 }
 .personal-tuition-service .service__content, .online-classes-service .service__content, .self-study-service .service__content {
   height: 100%;
@@ -1165,53 +1169,103 @@ span {
   margin-top: 40px;
 }
 .personal-tuition-service .service-info, .online-classes-service .service-info, .self-study-service .service-info {
-  height: 220px;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 575px) {
+  .personal-tuition-service .service-info, .online-classes-service .service-info, .self-study-service .service-info {
+    height: 220px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
 }
 .personal-tuition-service .service-info .service-info__title, .online-classes-service .service-info .service-info__title, .self-study-service .service-info .service-info__title {
-  font-size: 30px;
+  font-size: 18px;
   font-weight: 600;
   color: #263238;
 }
+@media (min-width: 575px) {
+  .personal-tuition-service .service-info .service-info__title, .online-classes-service .service-info .service-info__title, .self-study-service .service-info .service-info__title {
+    font-size: 30px;
+  }
+}
 .personal-tuition-service .service-info .service-info__text, .online-classes-service .service-info .service-info__text, .self-study-service .service-info .service-info__text {
+  font-size: 13px;
   margin-top: 30px;
-  font-size: 20px;
-  line-height: 30px;
+  line-height: 20px;
   font-weight: 400;
   color: #8F95A5;
+  text-align: center;
+}
+@media (min-width: 575px) {
+  .personal-tuition-service .service-info .service-info__text, .online-classes-service .service-info .service-info__text, .self-study-service .service-info .service-info__text {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 .personal-tuition-service .service-info-button, .online-classes-service .service-info-button, .self-study-service .service-info-button {
+  margin-top: 38px;
   width: fit-content;
   background-color: #EEEEEE;
   border-radius: 5px;
+  height: 37px;
 }
 .personal-tuition-service .service-info-button .service-info-button__content, .online-classes-service .service-info-button .service-info-button__content, .self-study-service .service-info-button .service-info-button__content {
   height: 100%;
-  padding: 0 22px;
+  padding: 0 16px;
   display: flex;
   align-items: center;
   gap: 16px;
 }
+@media (min-width: 575px) {
+  .personal-tuition-service .service-info-button .service-info-button__content, .online-classes-service .service-info-button .service-info-button__content, .self-study-service .service-info-button .service-info-button__content {
+    padding: 0 22px;
+  }
+}
 .personal-tuition-service .service-info-button .service-info-button__price, .online-classes-service .service-info-button .service-info-button__price, .self-study-service .service-info-button .service-info-button__price {
-  font-size: 30px;
+  font-size: 18px;
   font-weight: 400;
   color: #263238;
 }
+@media (min-width: 575px) {
+  .personal-tuition-service .service-info-button .service-info-button__price, .online-classes-service .service-info-button .service-info-button__price, .self-study-service .service-info-button .service-info-button__price {
+    font-size: 30px;
+  }
+}
 .personal-tuition-service .service-info-button .service-info-button__info, .online-classes-service .service-info-button .service-info-button__info, .self-study-service .service-info-button .service-info-button__info {
-  font-size: 18px;
+  font-size: 14px;
   line-height: 20px;
   font-weight: 400;
   color: #546269;
 }
+@media (min-width: 575px) {
+  .personal-tuition-service .service-info-button .service-info-button__info, .online-classes-service .service-info-button .service-info-button__info, .self-study-service .service-info-button .service-info-button__info {
+    font-size: 18px;
+  }
+}
 
 .self-study-service .service__picture {
-  margin-right: 100px;
+  max-width: 248px;
+}
+@media (min-width: 575px) {
+  .self-study-service .service__picture {
+    margin-right: 100px;
+  }
 }
 
 .online-classes-service .service__picture {
-  margin-top: 25px;
-  margin-right: 50px;
+  max-width: 257px;
+}
+@media (min-width: 575px) {
+  .online-classes-service .service__picture {
+    margin-top: 25px;
+    margin-right: 50px;
+  }
+}
+
+.personal-tuition-service .service__picture {
+  max-width: 241px;
 }
 
 .pricing__content {
@@ -1220,14 +1274,18 @@ span {
   align-items: center;
 }
 .pricing__title {
-  font-size: 48px;
+  font-size: 24px;
   font-weight: 600;
+}
+@media (min-width: 575px) {
+  .pricing__title {
+    font-size: 48px;
+  }
 }
 .pricing__services {
   margin-top: 67px;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 @media (min-width: 575px) {
   .pricing__services {

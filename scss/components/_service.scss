@@ -1,5 +1,10 @@
 %service {
     display: flex;
+    margin-top: 72px;
+
+    &:first-child {
+        margin-top: 0;
+    }
 
     .service__content {
         height: 100%;
@@ -16,51 +21,81 @@
     }
 
     .service-info {
-        height: 220px;
-        display: grid;
-        grid-template-rows: auto 1fr auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include md {
+            height: 220px;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+        }
 
         .service-info__title {
-            font-size: 30px;
+            font-size: 18px;
             font-weight: $semi-bold;
             color: $light-black;
+
+            @include md {
+                font-size: 30px;
+            }
         }
 
         .service-info__text {
+            font-size: 13px;
             margin-top: 30px;
-            font-size: 20px;
-            line-height: 30px;
+            line-height: 20px;
             font-weight: $regular;
             color: $sky-gray;
+            text-align: center;
+
+            @include md {
+                font-size: 20px;
+                line-height: 30px;
+            }
         }
 
         .service-info__button {}
     }
 
     .service-info-button {
+        margin-top: 38px;
         width: fit-content;
         background-color: $light-gray-v3;
         border-radius: 5px;
+        height: 37px;
 
         .service-info-button__content {
             height: 100%;
-            padding: 0 22px;
+            padding: 0 16px;
             display: flex;
             align-items: center;
             gap: 16px;
+
+            @include md {
+                padding: 0 22px;
+            }
         }
 
         .service-info-button__price {
-            font-size: 30px;
+            font-size: 18px;
             font-weight: $regular;
             color: $light-black;
+
+            @include md {
+                font-size: 30px;
+            }
         }
 
         .service-info-button__info {
-            font-size: 18px;
+            font-size: 14px;
             line-height: 20px;
             font-weight: $regular;
             color: $dark-gray;
+
+            @include md {
+                font-size: 18px;
+            }
         }
     }
 }
@@ -69,7 +104,11 @@
     @extend %service;
 
     .service__picture {
-        margin-right: 100px;
+        max-width: 248px;
+
+        @include md {
+            margin-right: 100px;
+        }
     }
 }
 
@@ -77,13 +116,19 @@
     @extend %service;
 
     .service__picture {
-        margin-top: 25px;
-        margin-right: 50px;
+        max-width: 257px;
+
+        @include md {
+            margin-top: 25px;
+            margin-right: 50px;
+        }
     }
 }
 
 .personal-tuition-service {
     @extend %service;
 
-    .service__picture {}
+    .service__picture {
+        max-width: 241px;
+    }
 }
