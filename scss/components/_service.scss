@@ -6,18 +6,30 @@
         margin-top: 0;
     }
 
+    @include sm {
+        margin-top: 0;
+    }
+
     .service__content {
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+
+        @include md {
+            height: 443px;
+        }
     }
 
     .service__picture {}
 
     .service__info {
         margin-top: 40px;
+
+        @include sm {
+            margin-top: 0;
+        }
     }
 
     .service-info {
@@ -36,7 +48,15 @@
             font-weight: $semi-bold;
             color: $light-black;
 
+            @include sm {
+                font-size: 24px;
+            }
+
             @include md {
+                font-size: 20px;
+            }
+
+            @include xl {
                 font-size: 30px;
             }
         }
@@ -44,12 +64,23 @@
         .service-info__text {
             font-size: 13px;
             margin-top: 30px;
-            line-height: 20px;
+            line-height: 25px;
             font-weight: $regular;
             color: $sky-gray;
             text-align: center;
 
+            @include sm {
+                font-size: 14px;
+                font-size: 20px;
+                margin-top: 0;
+            }
+
             @include md {
+                font-size: 14px;
+                text-align: start;
+            }
+
+            @include xl {
                 font-size: 20px;
                 line-height: 30px;
             }
@@ -64,6 +95,15 @@
         background-color: $light-gray-v3;
         border-radius: 5px;
         height: 37px;
+
+        @include sm {
+            margin-top: 0;
+            height: 45px;
+        }
+
+        @include md {
+            min-width: 220px;
+        }
 
         .service-info-button__content {
             height: 100%;
@@ -82,7 +122,13 @@
             font-weight: $regular;
             color: $light-black;
 
-            @include md {
+            @include sm {
+                font-size: 22px;
+            }
+
+            @include md {}
+
+            @include xl {
                 font-size: 30px;
             }
         }
@@ -93,7 +139,13 @@
             font-weight: $regular;
             color: $dark-gray;
 
-            @include md {
+            @include sm {
+                font-size: 16px;
+            }
+
+            @include md {}
+
+            @include xl {
                 font-size: 18px;
             }
         }
@@ -106,7 +158,15 @@
     .service__picture {
         max-width: 248px;
 
+        @include sm {
+            max-width: 291px;
+        }
+
         @include md {
+            max-width: 197px;
+        }
+
+        @include xl {
             margin-right: 100px;
         }
     }
@@ -118,7 +178,16 @@
     .service__picture {
         max-width: 257px;
 
+        @include sm {
+            margin-top: auto;
+            max-width: 314px;
+        }
+
         @include md {
+            max-width: 219px;
+        }
+
+        @include xl {
             margin-top: 25px;
             margin-right: 50px;
         }
@@ -130,5 +199,13 @@
 
     .service__picture {
         max-width: 241px;
+
+        @include sm {
+            max-width: 253px;
+        }
+
+        @include md {
+            max-width: 210px;
+        }
     }
 }

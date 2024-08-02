@@ -69,7 +69,11 @@
     }
 
     &__pricing {
-        margin-top: 207px;
+        margin-top: 124px;
+
+        @include xl {
+            margin-top: 207px;
+        }
     }
 
     &__contact-us {
